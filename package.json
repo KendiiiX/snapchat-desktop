@@ -1,0 +1,70 @@
+{
+  "name": "snapchat-desktop",
+  "productName": "Snapchat",
+  "desktopName": "snapchat-desktop.desktop",
+  "version": "1.2.0",
+  "description": "Snapchat Web desktop app (self-contained)",
+  "main": "main.js",
+  "author": "KendiX <kendix@users.noreply.github.com>",
+  "homepage": "https://github.com/KendiiiX/snapchat-desktop",
+  "license": "MIT",
+  "scripts": {
+    "start": "env -u ELECTRON_RUN_AS_NODE electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --linux deb",
+    "dist:deb": "electron-builder --linux deb"
+  },
+  "build": {
+    "appId": "com.kendix.snapchat-desktop",
+    "productName": "Snapchat",
+    "executableName": "snapchat-desktop",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "assets/icon.png",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Network;InstantMessaging;",
+      "icon": "build/icons",
+      "syncDesktopName": true,
+      "synopsis": "Snapchat Web as a desktop app",
+      "description": "Self-contained Snapchat Web client for Linux. No system Chrome/Chromium required.",
+      "desktop": {
+        "entry": {
+          "Name": "Snapchat",
+          "Comment": "Snapchat Web desktop app",
+          "StartupWMClass": "snapchat-desktop",
+          "Terminal": "false",
+          "Type": "Application",
+          "Categories": "Network;InstantMessaging;"
+        }
+      }
+    },
+    "deb": {
+      "afterInstall": "build/after-install.sh",
+      "packageCategory": "web",
+      "fpm": [
+        "--deb-recommends=libgtk-3-0",
+        "--deb-recommends=libnotify4",
+        "--deb-recommends=libnss3",
+        "--deb-recommends=libxss1",
+        "--deb-recommends=libxtst6",
+        "--deb-recommends=xdg-utils",
+        "--deb-recommends=libatspi2.0-0",
+        "--deb-recommends=libuuid1"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  }
+}
