@@ -2,7 +2,7 @@
   "name": "snapchat-desktop",
   "productName": "Snapchat",
   "desktopName": "snapchat-desktop.desktop",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Snapchat Web desktop app (self-contained)",
   "main": "main.js",
   "author": "KendiX <kendix@users.noreply.github.com>",
