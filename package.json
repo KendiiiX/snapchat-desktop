@@ -2,7 +2,7 @@
   "name": "snapchat-desktop",
   "productName": "Snapchat",
   "desktopName": "snapchat-desktop.desktop",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Snapchat Web desktop app (self-contained)",
   "main": "main.js",
   "author": "KendiX <kendix@users.noreply.github.com>",
@@ -41,7 +41,7 @@
         "entry": {
           "Name": "Snapchat",
           "Comment": "Snapchat Web desktop app",
-          "StartupWMClass": "snapchat-desktop",
+          "StartupWMClass": "Snapchat",
           "Terminal": "false",
           "Type": "Application",
           "Categories": "Network;InstantMessaging;",

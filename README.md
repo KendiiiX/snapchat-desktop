@@ -26,7 +26,7 @@ Le paquet `.deb` embarque tout ce qu'il faut. Tu n'as pas besoin d'installer Chr
 2. Installe-le :
 
 ```bash
-sudo apt install ./snapchat-desktop_1.2.1_amd64.deb
+sudo apt install ./snapchat-desktop_1.2.2_amd64.deb
 ```
 
 3. Ouvre **Snapchat** depuis le menu des applications
@@ -40,7 +40,7 @@ git clone https://github.com/KendiiiX/snapchat-desktop.git
 cd snapchat-desktop
 npm install
 npm run dist:deb
-sudo apt install ./dist/snapchat-desktop_1.2.1_amd64.deb
+sudo apt install ./dist/snapchat-desktop_1.2.2_amd64.deb
 ```
 
 ## Utilisation
