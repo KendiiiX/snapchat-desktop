@@ -2,7 +2,7 @@
   "name": "snapchat-desktop",
   "productName": "Snapchat",
   "desktopName": "snapchat-desktop.desktop",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Snapchat Web desktop app (self-contained)",
   "main": "main.js",
   "author": "KendiX <kendix@users.noreply.github.com>",
@@ -44,9 +44,15 @@
           "StartupWMClass": "snapchat-desktop",
           "Terminal": "false",
           "Type": "Application",
-          "Categories": "Network;InstantMessaging;"
+          "Categories": "Network;InstantMessaging;",
+          "StartupNotify": "true"
         }
-      }
+      },
+      "executableArgs": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--enable-unsafe-swiftshader"
+      ]
     },
     "deb": {
       "afterInstall": "build/after-install.sh",
